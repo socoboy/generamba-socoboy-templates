@@ -7,9 +7,9 @@ license:
 
 # The declarations for code files
 code_files:
-- {name: Module.h, path: Code/module.h}
-- {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.h}
-- {name: Wireframe/Wireframe.m, path: Code/Wireframe/wireframe.m}
+- {name: Module.h, path: Code/module.h.liquid}
+- {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.h.liquid}
+- {name: Wireframe/Wireframe.m, path: Code/Wireframe/wireframe.m.liquid}
 
 # The declarations for test files
 test_files:

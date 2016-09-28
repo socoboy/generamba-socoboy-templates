@@ -1,0 +1,34 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import <Masonry.h>
+
+@interface {{ prefix }}{{ module_info.name }}ViewController () 
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}ViewController
+
+@synthesize presenter = _presenter;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.presenter viewDidLoad];
+    // Do some setup here
+    
+}
+
+#pragma mark + Setups
+
+
+#pragma mark + Actions
+
+
+#pragma mark + other delegates

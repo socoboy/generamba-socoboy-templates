@@ -1,2 +1,2 @@
-# generamba-socoboy-templates
-templates use for generamba module generator
+# viper-mvvm-socoboy
+VIPER+MVVM pattern template use for generamba module generator

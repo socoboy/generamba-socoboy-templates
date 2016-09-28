@@ -25,6 +25,7 @@
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}Presenter> presenter;
 
 #pragma mark + methods for presenter to call
+// - (void)someMethod;
 
 @end
 
@@ -47,6 +48,7 @@
 - (void)viewDidLoad;
 
 #pragma mark + methods for interactor to call
+// - (void)someMethod;
 
 @end
 
@@ -61,8 +63,10 @@
 - (UIViewController *)initializeModule;
 
 #pragma mark + methods to install module to other modules
+// - (void)someMethod;
 
 #pragma mark + methods for presenter to call
+// - (void)someMethod;
 
 @end
 
@@ -73,12 +77,19 @@
 @property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}Presenter> presenter;
 
 #pragma mark + methods for presenter to call
+// - (void)someMethod;
 
 @end
 
 
 #pragma mark - View Model Protocol
 @protocol {{ prefix }}{{ module_info.name }}ViewModel <NSObject>
+
+#pragma mark + init and reload data
+// - (void)someMethod;
+
+#pragma mark + properties
+// @property (nonatomic, strong) NSString *someProperties;
 
 @end
 

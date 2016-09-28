@@ -18,6 +18,7 @@
 @synthesize presenter   = _presenter;
 @synthesize view        = _view;
 
+#pragma mark + initialize module
 - (UIViewController *)initializeModule {
     {{prefix}}{{module_info.name}}ViewController *view    = [{{ prefix }}{{ module_info.name }}ViewController new];
     {{prefix}}{{module_info.name}}Interactor *interactor  = [{{ prefix }}{{ module_info.name }}Interactor new];
@@ -34,5 +35,15 @@
     
     return view;
 }
+
+#pragma mark + methods to install module to other modules
+// - (void)someMethod {
+//
+// }
+
+#pragma mark + methods for presenter to call
+// - (void)someMethod {
+//
+// }
 
 @end

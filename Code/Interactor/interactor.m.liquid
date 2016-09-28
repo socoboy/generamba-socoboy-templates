@@ -19,6 +19,7 @@
 
 @synthesize presenter = _presenter;
 
+#pragma mark + init
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -26,5 +27,10 @@
     }
     return self;
 }
+
+#pragma mark + methods for presenter to call
+// - (void)someMethod {
+//
+// }
 
 @end

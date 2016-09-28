@@ -16,6 +16,7 @@
 @synthesize wireframe   = _wireframe;
 @synthesize interactor  = _interactor;
 
+#pragma mark + initialize
 - (instancetype)initWithView:(UIViewController<{{ prefix }}{{ module_info.name }}View> *)view
                    wireframe:(id<{{ prefix }}{{ module_info.name }}Wireframe>)wireframe
                   interactor:(id<{{ prefix }}{{ module_info.name }}Interactor>)interactor
@@ -30,8 +31,14 @@
     return self;
 }
 
+#pragma mark + methods for view to call
 - (void)viewDidLoad {
 	// do something
 }
+
+#pragma mark + methods for interactor to call
+// - (void)someMethod {
+//
+// }
 
 @end

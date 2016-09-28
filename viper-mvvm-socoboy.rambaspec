@@ -10,6 +10,15 @@ code_files:
 - {name: Module.h, path: Code/module.h.liquid}
 - {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.h.liquid}
 - {name: Wireframe/Wireframe.m, path: Code/Wireframe/wireframe.m.liquid}
+- {name: Presenter/Presenter.h, path: Code/Presenter/presenter.h.liquid}
+- {name: Presenter/Presenter.m, path: Code/Presenter/presenter.m.liquid}
+- {name: View/ViewController.h, path: Code/View/viewController.h.liquid}
+- {name: View/ViewController.m, path: Code/View/viewController.m.liquid}
+- {name: View/ViewController.xib, path: Code/View/viewController.xib.liquid}
+- {name: Interactor/Interactor.h, path: Code/View/interactor.h.liquid}
+- {name: Interactor/Interactor.m, path: Code/View/interactor.m.liquid}
+- {name: ViewModel/ViewModel.h, path: Code/ViewModel/viewModel.h.liquid}
+- {name: ViewModel/ViewModel.m, path: Code/ViewModel/viewModel.m.liquid}
 
 # The declarations for test files
 test_files:

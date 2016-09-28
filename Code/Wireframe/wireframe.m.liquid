@@ -14,22 +14,22 @@
 
 @implementation {{ prefix }}{{ module_info.name }}Wireframe
 
-@synthesize presenter = _presenter;
-@synthesize view = _view;
+@synthesize presenter   = _presenter;
+@synthesize view        = _view;
 
 - (UIViewController *)initializeModule {
-    {{ prefix }}{{ module_info.name }}ViewController *view = [{{ prefix }}{{ module_info.name }}ViewController new];
-    {{ prefix }}{{ module_info.name }}Interactor *interactor = [{{ prefix }}{{ module_info.name }}Interactor new];
-    {{ prefix }}{{ module_info.name }}ViewModel *viewModel = [{{ prefix }}{{ module_info.name }}ViewModel new];
-    {{ prefix }}{{ module_info.name }}Presenter *presenter = [[{{ prefix }}{{ module_info.name }}Presenter alloc] initWithView:view
+    {{prefix}}{{module_info.name}}ViewController *view    = [{{ prefix }}{{ module_info.name }}ViewController new];
+    {{prefix}}{{module_info.name}}Interactor *interactor  = [{{ prefix }}{{ module_info.name }}Interactor new];
+    {{prefix}}{{module_info.name}}ViewModel *viewModel    = [{{ prefix }}{{ module_info.name }}ViewModel new];
+    {{prefix}}{{module_info.name}}Presenter *presenter    = [[{{ prefix }}{{ module_info.name }}Presenter alloc] initWithView:view
                                                                            wireframe:self
                                                                           interactor:interactor
                                                                            viewModel:viewModel];
     
-    view.presenter = presenter;
-    interactor.presenter = presenter;
-    self.presenter = presenter;
-    self.view = view;
+    view.presenter          = presenter;
+    interactor.presenter    = presenter;
+    self.presenter          = presenter;
+    self.view               = view;
     
     return view;
 }

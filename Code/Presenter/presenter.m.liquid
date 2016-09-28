@@ -10,10 +10,10 @@
 
 @implementation {{ prefix }}{{ module_info.name }}Presenter
 
-@synthesize view = _view;
-@synthesize viewModel = _viewModel;
-@synthesize wireframe = _wireframe;
-@synthesize interactor = _interactor;
+@synthesize view        = _view;
+@synthesize viewModel   = _viewModel;
+@synthesize wireframe   = _wireframe;
+@synthesize interactor  = _interactor;
 
 - (instancetype)initWithView:(UIViewController<{{ prefix }}{{ module_info.name }}View> *)view
                    wireframe:(id<{{ prefix }}{{ module_info.name }}Wireframe>)wireframe
@@ -21,10 +21,10 @@
                    viewModel:(id<{{ prefix }}{{ module_info.name }}ViewModel>)viewModel {
     self = [self init];
     if (self) {
-        _view = view;
-        _viewModel = viewModel;
-        _interactor = interactor;
-        _wireframe = wireframe;
+        _view           = view;
+        _viewModel      = viewModel;
+        _interactor     = interactor;
+        _wireframe      = wireframe;
     }
     return self;
 }

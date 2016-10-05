@@ -17,10 +17,10 @@
 @synthesize interactor  = _interactor;
 
 #pragma mark + initialize
-- (instancetype)initWithView:(UIViewController<{{ prefix }}{{ module_info.name }}View> *)view
-                   wireframe:(id<{{ prefix }}{{ module_info.name }}Wireframe>)wireframe
-                  interactor:(id<{{ prefix }}{{ module_info.name }}Interactor>)interactor
-                   viewModel:(id<{{ prefix }}{{ module_info.name }}ViewModel>)viewModel {
+- (instancetype)initWithView:(UIViewController<{{ prefix }}{{ module_info.name }}ViewProtocol> *)view
+                   wireframe:(id<{{ prefix }}{{ module_info.name }}WireframeProtocol>)wireframe
+                  interactor:(id<{{ prefix }}{{ module_info.name }}InteractorProtocol>)interactor
+                   viewModel:(id<{{ prefix }}{{ module_info.name }}ViewModelProtocol>)viewModel {
     self = [self init];
     if (self) {
         _view           = view;

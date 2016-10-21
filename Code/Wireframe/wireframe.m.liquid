@@ -31,9 +31,15 @@
     view.presenter          = presenter;
     interactor.presenter    = presenter;
     self.presenter          = presenter;
-    self.view               = view;
     
     return view;
+}
+
+- (UIViewController *)view {
+    if (!_view) {
+        _view = [self initializeModule];
+    }
+    return _view;
 }
 
 #pragma mark + methods to install module to other modules

@@ -25,7 +25,7 @@
 #pragma mark - Wireframe Protocol
 @protocol {{ prefix }}{{ module_info.name }}WireframeProtocol <NSObject>
 
-@property (nonatomic, weak) UIViewController *view;
+@property (nonatomic, weak) {{ prefix }}BasedViewController *view;
 @property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}WireframePresenterProtocol> presenter;
 
 #pragma mark + initialize module
@@ -55,7 +55,7 @@
 #pragma mark + Main Presenter Protocol
 @protocol {{ prefix }}{{ module_info.name }}PresenterProtocol <{{ prefix }}{{ module_info.name }}ViewPresenterProtocol, {{ prefix }}{{ module_info.name }}WireframePresenterProtocol, {{ prefix }}{{ module_info.name }}InteractorPresenterProtocol>
 
-@property (nonatomic, weak) UIViewController<{{ prefix }}{{ module_info.name }}ViewProtocol> *view;
+@property (nonatomic, weak) {{ prefix }}BasedViewController<{{ prefix }}{{ module_info.name }}ViewProtocol> *view;
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}WireframeProtocol> wireframe;
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorProtocol> interactor;
 

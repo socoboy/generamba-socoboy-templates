@@ -1,0 +1,17 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+#import "{{ prefix }}{{ module_info.name }}Module.h"
+
+@interface {{ prefix }}{{ module_info.name }}Configurator : NSObject 
+
++ ({{ prefix }}{{ module_info.name }}ViewController *)initializeModuleWithModel:(id)model;
+
++ ({{ prefix }}{{ module_info.name }}Wireframe *)displayModuleByPushNavigationFromViewController:(UIViewController *)controller model:(id)model animated:(BOOL)animated;
+
+@end

@@ -28,9 +28,6 @@
 @property (nonatomic, weak) UIViewController *view;
 @property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}WireframePresenterProtocol> presenter;
 
-#pragma mark + initialize module
-- (UIViewController *)initializeModule;
-
 #pragma mark + methods to install module to other modules
 // - (void)someMethod;
 
@@ -44,6 +41,7 @@
 @protocol {{ prefix }}{{ module_info.name }}ViewProtocol <NSObject>
 
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewPresenterProtocol> presenter;
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}WireframeProtocol> wireframe;
 
 #pragma mark + methods for presenter to call
 // - (void)someMethod;

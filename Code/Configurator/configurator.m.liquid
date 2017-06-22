@@ -1,0 +1,38 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+#import "{{ prefix }}{{ module_info.name }}Module.h"
+
+@interface {{ prefix }}{{ module_info.name }}Configurator
+
++ ({{ prefix }}{{ module_info.name }}ViewController *)initializeModuleWithModel:(id)model {
+    {{ prefix }}{{ module_info.name }}Wireframe *wireframe = [{{ prefix }}{{ module_info.name }}Wireframe new];
+    {{ prefix }}{{ module_info.name }}ViewController *view    = [{{ prefix }}{{ module_info.name }}ViewController new];
+    {{ prefix }}{{ module_info.name }}Interactor *interactor  = [{{ prefix }}{{ module_info.name }}Interactor new];
+    {{ prefix }}{{ module_info.name }}ViewModel *viewModel    = [{{ prefix }}{{ module_info.name }}ViewModel new];
+    {{ prefix }}{{ module_info.name }}Presenter *presenter    = [[{{ prefix }}{{ module_info.name }}Presenter alloc] initWithView:view wireframe:wireframe interactor:interactor viewModel:viewModel];
+    [presenter setModel:model];
+    
+    view.presenter          = presenter;
+    view.wireframe          = wireframe;
+    interactor.presenter    = presenter;
+    wireframe.presenter     = presenter;
+    wireframe.view          = view;
+
+    return view;
+}
+
++ ({{ prefix }}{{ module_info.name }}Wireframe *)displayModuleByPushNavigationFromViewController:(UIViewController *)controller model:(id)model animated:(BOOL)animated {
+    {{ prefix }}{{ module_info.name }}ViewController *controller = [self initializeModuleWithModel:model];
+    
+    [controller.navigationController pushViewController:view animated:animated];
+
+    return controller.wireframe;
+}
+
+@end

@@ -18,30 +18,6 @@
 @synthesize presenter   = _presenter;
 @synthesize view        = _view;
 
-#pragma mark + initialize module
-- (UIViewController *)initializeModule {
-    {{prefix}}{{module_info.name}}ViewController *view    = [{{ prefix }}{{ module_info.name }}ViewController new];
-    {{prefix}}{{module_info.name}}Interactor *interactor  = [{{ prefix }}{{ module_info.name }}Interactor new];
-    {{prefix}}{{module_info.name}}ViewModel *viewModel    = [{{ prefix }}{{ module_info.name }}ViewModel new];
-    {{prefix}}{{module_info.name}}Presenter *presenter    = [[{{ prefix }}{{ module_info.name }}Presenter alloc] initWithView:view
-                                                                           wireframe:self
-                                                                          interactor:interactor
-                                                                           viewModel:viewModel];
-    
-    view.presenter          = presenter;
-    interactor.presenter    = presenter;
-    self.presenter          = presenter;
-    
-    return view;
-}
-
-- (UIViewController *)view {
-    if (!_view) {
-        _view = [self initializeModule];
-    }
-    return _view;
-}
-
 #pragma mark + methods to install module to other modules
 // - (void)someMethod {
 //

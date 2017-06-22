@@ -19,6 +19,8 @@ code_files:
 - {name: Interactor/Interactor.m, path: Code/Interactor/interactor.m.liquid}
 - {name: ViewModel/ViewModel.h, path: Code/ViewModel/viewModel.h.liquid}
 - {name: ViewModel/ViewModel.m, path: Code/ViewModel/viewModel.m.liquid}
+- {name: Configurator/Configurator.h, path: Code/Configurator/configurator.h.liquid}
+- {name: Configurator/Configurator.m, path: Code/Configurator/configurator.m.liquid}
 
 # The declarations for test files
 test_files:

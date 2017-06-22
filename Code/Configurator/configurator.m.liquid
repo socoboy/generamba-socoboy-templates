@@ -7,8 +7,15 @@
 //
 
 #import "{{ prefix }}{{ module_info.name }}Module.h"
+#import "{{ prefix }}{{ module_info.name }}Configurator.h"
 
-@interface {{ prefix }}{{ module_info.name }}Configurator
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import "{{ prefix }}{{ module_info.name }}Wireframe.h"
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}ViewModel.h"
+
+@implementation {{ prefix }}{{ module_info.name }}Configurator
 
 + ({{ prefix }}{{ module_info.name }}ViewController *)initializeModuleWithModel:(id)model {
     {{ prefix }}{{ module_info.name }}Wireframe *wireframe = [{{ prefix }}{{ module_info.name }}Wireframe new];

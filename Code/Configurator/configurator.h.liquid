@@ -8,6 +8,9 @@
 
 #import "{{ prefix }}{{ module_info.name }}Module.h"
 
+@class {{ prefix }}{{ module_info.name }}ViewController;
+@class {{ prefix }}{{ module_info.name }}Wireframe;
+
 @interface {{ prefix }}{{ module_info.name }}Configurator : NSObject 
 
 + ({{ prefix }}{{ module_info.name }}ViewController *)initializeModuleWithModel:(id)model;
